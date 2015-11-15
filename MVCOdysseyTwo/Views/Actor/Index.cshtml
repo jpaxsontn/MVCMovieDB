@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVCOdysseyTwo.Models.Actor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Actor Index</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Biographical notes</th>
+    </tr>
+    @foreach (var actor in Model)
+    {
+        <tr>
+            <td>@actor.Name</td>
+            <td>@actor.ShortBio</td>
+        </tr>
+    }
+</table>
+
